@@ -1,0 +1,20 @@
+<input>
+<div class="row weatherRow" *ngFor="let val of weatherRows; first as isFirst">
+    <section class="widget">
+        <div *ngIf="isFirst" class="pb-2">
+            <h3 class="city bold">Entered City : {{city}}</h3>
+            <h3 class="day">Today</h3>
+        </div>
+        <h3 *ngIf="!isFirst" class="day pb-2">{{val.day}}</h3>
+        <div class="container pt-2" *ngFor="let value of val.value">
+                <div class="row weatherRow">
+                    <time class="timestamp col-3">{{value.time}}</time>
+                    <div class="icon col-3">
+                        <img src="{{value.icon}}" /></div>
+                    <div class="temp col-3">{{value.temp}}</div>
+                    <div class="windspeed col-3"><img [style.transform]="getDirection(value.arrowStyling)" src="assets/arrow.svg"/>{{value.windSpeed}}</div>
+            </div>
+        </div>
+    </section>
+
+</div>
