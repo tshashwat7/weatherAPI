@@ -1,6 +1,8 @@
 # WeatherWidget
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
+clone the project "https://github.com/tshashwat7/weatherAPI.git"
+run npm install
 
 ## Development server
 
